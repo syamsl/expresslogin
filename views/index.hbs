@@ -1,0 +1,29 @@
+<header>
+    <!-- As a heading -->
+    <nav class="navbar navbar-light bg-gradient bg-primary">
+        <span class="navbar-brand mb-0 h1 p-2 ms-4" id="titl">
+            {{#if user}}
+            {{user.usr}}
+            {{/if}}
+        </span>
+            <a class="btn btn-secondary bg-gradient p-1 me-3" href="/index/logout" type="button">Logout</a>
+    </nav>
+</header>
+
+<section>
+    <div class="container mt-5"></div>
+    <div class="row">
+        {{#each products}}
+        <div class="col-md-3">
+            <div class="card" style="width: 19rem;">
+                <img class="card-img-top img" src="{{this.image}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <p class="card-text">{{this.description}}</p>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</section>
